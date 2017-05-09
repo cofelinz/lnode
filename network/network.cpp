@@ -13,7 +13,7 @@ Net::~Net()
 
 }
 
-bool Net::Listen(const char* ip, unsigned short port, backlog)
+bool Net::Listen(const char* ip, uint16_t port, uint16_t backlog)
 {
 
 }
@@ -28,12 +28,7 @@ bool Net::Disconnect()
 
 }
 
-bool Net::RegEvent(T event)
-{
-
-}
-
 void Net::Run()
 {
-
+	event_base_loop(base_, EVLOOP_NONBLOCK);
 }
